@@ -6,14 +6,16 @@
 #### AD and domain membership
 - If you need to clean all samba database files (if you're experimenting with AD membership in samba)[clean_all_bd script](linux/samba/ad/clean_all_bd.sh)
 - to add your Samba server to AD first - save your own smb.conf, nsswitch.conf, krb5.conf
-
-```bash
-mkdir smb_backup
-sudo mv /etc/samba/smb.conf ./smb_backup/smb.conf.$(date +"%Y-%m%-%d").bak
-sudo mv /etc/nsswitch.conf ./smb_backup/nsswitch.conf.$(date +"%Y-%m%-%d").bak
-sudo mv /etc/krb5.conf ./smb_backup/krb5.conf.$(date +"%Y-%m%-%d").bak
-```
-use [this smb.conf](linux/samba/ad/smb.conf) as a sample.
+	
+	```bash
+	mkdir smb_backup
+	sudo mv /etc/samba/smb.conf ./smb_backup/smb.conf.$(date +"%Y-%m%-%d").bak
+	sudo mv /etc/nsswitch.conf ./smb_backup/nsswitch.conf.$(date +"%Y-%m%-%d").bak
+	sudo mv /etc/krb5.conf ./smb_backup/krb5.conf.$(date +"%Y-%m%-%d").bak
+	```
+	use [this smb.conf](linux/samba/ad/smb.conf) as a sample.
+	
+	
 
 ### bash
 
