@@ -2,6 +2,12 @@
 
 ## Useful linux scripts
 
+### Docker
+#### Cron-driven docker build cache cleaner for gitlab-runner (not only, actually)
+From time to time docker build cache becomes a problem which uses 100% of disk space. [This script](linux/docker/docker_builder_cache_cleaner.sh) need to be added to cron, from where it will be see if there is a few space left. If disk have less space then 10% free - it will prune docker build cache.
+Every time it runs - it write log to /var/log/messages
+
+
 ### Samba
 #### AD and domain membership
 - If you need to clean all samba database files (if you're experimenting with AD membership in samba)[clean_all_bd script](linux/samba/ad/clean_all_bd.sh)
@@ -15,7 +21,7 @@
 	```
 	use [this smb.conf](linux/samba/ad/smb.conf) as a sample.
 	
-	
+---	
 
 ### bash
 
@@ -34,6 +40,8 @@ It will be represented like this:
 ![shining_bash.png](screenshots/shining_bash.png)
 
 yeah, it also shows a git branch if the directory is a git repository
+
+---
 
 ## Windows
 
