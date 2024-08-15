@@ -7,6 +7,17 @@
 From time to time docker build cache becomes a problem which uses 100% of disk space. [This script](linux/docker/docker_builder_cache_cleaner.sh) need to be added to cron, from where it will be see if there is a few space left. If disk have less space then 10% free - it will prune docker build cache.
 Every time it runs - it write log to /var/log/messages
 
+### Scripts
+#### Script to reconnect OpenVPN
+Before you may use this script - make sure you have openvpn server and .ovpn config, you need login and password as well.
+Then you have to install openvpn app:
+```
+sudo apt update && sudo apt install openvpn
+```
+if you have not debian-like distro - you know what to do, if not - just search the web.
+After you have it all - place [this script](linux/scrits/openvpn_reconnector.sh) in some folder and pray. LoL
+Just joking. Place the file, edit three first variables (you can edit whole file, of course) and make the _cron job_ to run this script once in a while, but not more often then its' inner workaround.
+
 
 ### Samba
 #### AD and domain membership
